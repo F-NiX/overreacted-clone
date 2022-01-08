@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import React, { Component } from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
 import { connect } from 'react-redux'
 
@@ -20,7 +21,9 @@ class Header extends Component {
         marginBottom: 2.625 + 'rem'
       }}>
         <h1 style={{ fontSize: '1.98818rem', lineHeight: '2.625rem', marginBottom: 0, marginTop: 0 }}>
-          <a aria-current="page" style={{ boxShadow: 'none', textDecoration: 'none', color: 'var(--textTitle)' }} className="" href="/">Overreacted</a>
+          <Link  href="/">
+            <a aria-current="page" style={{ boxShadow: 'none', textDecoration: 'none', color: 'var(--textTitle)' }} className="">Overreacted</a>
+          </Link>
         </h1>
         <div 
           onClick={ this.toggleTheme }
